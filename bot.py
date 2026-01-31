@@ -78,3 +78,6 @@ def handle_callback(call):
         bot.answer_callback_query(call.id)        
     except Exception as e:   #шо с вот етим делат?!?!?!?!?!!?№1
         print(f"Произошла ошибка: {e}") #шо с вот етим делат?!?!?!?!?!!?№2
+
+
+bot.infinity_polling()

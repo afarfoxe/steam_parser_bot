@@ -28,11 +28,11 @@ try:
     #Заполнение словаря.
     ddict = dict(zip(list, listprices))
 
-    print("Актуальные скидки в Steam:")
+    
 
     #Вот такой вывод получился, надо будет импортировать переменную в файл с ботом (from main import result вроде).
     result = json.dumps(ddict, indent=4, ensure_ascii=False).replace('"', '').replace(',', '')
-    print(result)
+    
         
         
 
