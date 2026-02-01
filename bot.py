@@ -53,13 +53,17 @@ def show_menu(message):
         "Главное меню:",
         reply_markup=create_main_menu()
     )
+    
 
 @bot.message_handler(commands=['game_sales'])
 def show_catalog(message):
     #обработчик команды /game_sales
     bot.send_message(
         message.chat.id,
-        result
+        f"Актуальные скидки в Steam: \n{result}",
+        parse_mode='Markdown',
+        disable_web_page_preview=True
+        
     )
 
 
@@ -78,8 +82,11 @@ def handle_callback(call):
         bot.answer_callback_query(call.id, "Кнопка нажата") 
         bot.send_message(
             call.message.chat.id,
-            result
-        )    
+            f"Актуальные скидки в Steam: \n{result}",
+            parse_mode='Markdown',
+            disable_web_page_preview=True
+        )
+           
 
     
 
