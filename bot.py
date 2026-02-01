@@ -68,16 +68,20 @@ def show_catalog(message):
 
 @bot.callback_query_handler(func=lambda call: True)
 def handle_callback(call):
+    
     #обработчик всех каллБэк запросов
     chat_id = call.message.chat.id
     message_id = call.message.message_id
         
 # вставте сюда чёнюдь
-    try:     
-    #незн зач это но ок
-        bot.answer_callback_query(call.id)        
-    except Exception as e:   #шо с вот етим делат?!?!?!?!?!!?№1
-        print(f"Произошла ошибка: {e}") #шо с вот етим делат?!?!?!?!?!!?№2
+    if call.data == "game_sales":
+        bot.answer_callback_query(call.id, "Кнопка нажата") 
+        bot.send_message(
+            call.message.chat.id,
+            result
+        )    
+
+    
 
 
 bot.infinity_polling()
