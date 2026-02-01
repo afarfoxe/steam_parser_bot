@@ -17,6 +17,7 @@ try:
     #Создание списков.
     list = []
     listprices = []
+    listlinks = []
         
     #Заполнение списков с названиями игр и их цены(Со скидками).
     for sells in soup.find_all("span", class_="title"):
@@ -24,7 +25,12 @@ try:
 
     for sells in soup.find_all("div",class_="discount_final_price"):
         listprices.append(sells.get_text())
+    
+    #Собрал ссылки, пока без вывода
+    for sells in soup.find_all("a", class_="search_result_row ds_collapse_flag"):
+        listlinks.append(sells.get("href"))
 
+    
     #Заполнение словаря.
     ddict = dict(zip(list, listprices))
 
