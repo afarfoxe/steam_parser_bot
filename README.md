@@ -2,9 +2,11 @@
 Currently can send sales to you.
 
 
-<img width="721" height="633" alt="{D519FB28-9D33-4C88-B988-519ED1438BA0}" src="https://github.com/user-attachments/assets/7df2fc54-4ffc-4260-984e-3672cd0ca991" />
+<img width="807" height="809" alt="{235E2630-6A53-4DF0-ADC3-9BB7222C4D7F}" src="https://github.com/user-attachments/assets/b88b39a0-955a-4566-a77b-5c7276a1b126" />
 
 
-i'll add links soon.
+
+Added links and fixed prices btw 
+
 
 
